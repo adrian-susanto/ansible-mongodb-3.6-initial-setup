@@ -4,7 +4,7 @@
   vars:
     tvlk_mongod_initialization: true
     keyfile: "{{ lookup('file','/tmp/keyfile')}}"
-    datadog_api_key_parameter_store: "{{ lookup('aws_ssm','/tvlk-secret/shared/<changethiswithyourpd>/datadog.api.key',region='ap-southeast-1',decrypt=True)}}"
+    datadog_api_key_parameter_store: "{{ lookup('aws_ssm','/tvlk-secret/shared/fpr/datadog.api.key',region='ap-southeast-1',decrypt=True)}}"
   pre_tasks:
     - block:
         - name: set instance hostname
